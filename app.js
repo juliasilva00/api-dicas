@@ -6,6 +6,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+const port = process.env.PORT || 3000
+
 //DB Connection
 const conn = require("./db/conn");
 conn();
@@ -15,7 +17,7 @@ const routes = require("./routes/router")
 
 app.use('/api', routes)
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("Servidor está funcionado!!");
 });
 
