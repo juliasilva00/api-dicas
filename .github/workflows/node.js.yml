@@ -7,7 +7,6 @@ on:
 
 jobs:
   deploy-production:
-    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-20.04
     concurrency: deploy-to-production
     environment: production
