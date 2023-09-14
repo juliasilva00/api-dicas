@@ -18,6 +18,9 @@ router.route("/dicas/:id").patch((req, res) => dicasController.findByIdAndUpdate
 // Deletar pelo ID
 router.route("/dicas/:id").delete((req, res) => dicasController.deleteById(req, res));
 
+//pesquisa filtro
+router.route("/dicas/filter").get((req, res) => dicasController.filter(req, res));
+
 
 
 module.exports = router;
